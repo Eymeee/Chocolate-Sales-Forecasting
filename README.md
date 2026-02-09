@@ -83,6 +83,8 @@ Final selected model: **HistGradientBoostingRegressor**
 ### 2025 Boxes Forecast
 ![2025 Boxes Forecast](img/total_boxes_2025.png)
 
+- The final HistGradientBoosting models achieved **~14% MAPE on 2024 data** and were used to generate 2025 forecasts.
+
 ---
 
 ## Repository Structure
