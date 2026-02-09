@@ -25,9 +25,7 @@ How can we use historical chocolate sales data to predict future demand (revenue
 
 ## Dataset
 
-- Source :
-
-   - Kaggle Chocolate Sales dataset (https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales).  
+- Source : [Kaggle Chocolate Sales dataset](https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales).  
 
 - Key columns used :
    - `Date`
