@@ -11,26 +11,29 @@ The final models are trained on **2022–2023** data and tested on **2024**. Aft
 
 ## Project Goal
 
-**Problem statement:**  
+**Problem statement :**  
 How can we use historical chocolate sales data to predict future demand (revenue and volume) to support better planning and reduce stockouts/overstock?
 
-**Targets:**
+**Targets :**
 - Monthly **total revenue**
 - Monthly **total boxes shipped**
 
-**Forecast horizon:**
+**Forecast horizon :**
 - Full year **2025** (12 months)
 
 ---
 
 ## Dataset
 
-Source: Kaggle Chocolate Sales dataset (transactions).  
-Key columns used:
-- `Date`
-- `Country`
-- `Amount` (revenue)
-- `Boxes Shipped` (volume)
+- Source :
+
+   - Kaggle Chocolate Sales dataset (https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales).  
+
+- Key columns used :
+   - `Date`
+   - `Country`
+   - `Amount` (revenue)
+   - `Boxes Shipped` (volume)
 
 The pipeline aggregates transactions into monthly totals per country and engineers lag-based features for forecasting.
 
@@ -45,24 +48,38 @@ The pipeline aggregates transactions into monthly totals per country and enginee
 - Explore trends/seasonality and country/product contributions
 
 ### 2) Feature Engineering for Forecasting
-To use scikit-learn for forecasting, time series data is transformed into a supervised learning table with:
+To use scikit-learn for forecasting, time series data is transformed into a supervised learning table with :
 - Lag features: `rev_lag_1`, `rev_lag_2`, `box_lag_1`, `box_lag_2`
 - Seasonality features: `month_num`, `month_sin`, `month_cos`
 - Categorical encoding: One-hot encoding for `country`
 
 ### 3) Modeling & Evaluation
-**Time-based split:**
+**Time-based split :**
 - Train: 2022–2023
 - Test: 2024
 
-Models compared:
+**Models compared :**
 - Naive baseline (lag-1)
 - Ridge regression (with seasonality)
 - HistGradientBoostingRegressor (final choice)
 
-Metrics:
-- RMSE
-- MAPE
+## Metrics
+
+- **RMSE** (Root Mean Squared Error)
+
+$$
+\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}\left(y_i-\hat{y}_i\right)^2}
+$$
+
+- **MAPE** (Mean Absolute Percentage Error)
+
+$$
+\mathrm{MAPE}=\frac{1}{n}\sum_{i=1}^{n}\left|\frac{y_i-\hat{y}_i}{y_i}\right| \times 100
+$$
+
+Where:
+- $y_i$ is the true value, $\hat{y}_i$ is the predicted value, and $n$ is the number of observations.
+
 
 ### 4) 2025 Forecast Generation
 Forecasts are generated **recursively month-by-month** for 2025:
@@ -78,10 +95,10 @@ Final selected model: **HistGradientBoostingRegressor**
 - **Boxes forecast MAPE:** ~14.89%
 
 ### 2025 Revenue Forecast
-![2025 Revenue Forecast](img/total_revenue_2025.png)
+![2025 Revenue Forecast](assets/total_revenue_2025.png)
 
 ### 2025 Boxes Forecast
-![2025 Boxes Forecast](img/total_boxes_2025.png)
+![2025 Boxes Forecast](assets/total_boxes_2025.png)
 
 - The final HistGradientBoosting models achieved **~14% MAPE on 2024 data** and were used to generate 2025 forecasts.
 
