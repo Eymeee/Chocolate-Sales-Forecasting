@@ -1,7 +1,7 @@
 # Chocolate Sales Forecasting (2022–2025)
 
 Forecast monthly chocolate sales using historical transactions.  
-This project builds and evaluates forecasting models using a time-aware workflow (no random shuffling), then generates **2025 forecasts** for:
+This project builds and evaluates forecasting models using a time-aware workflow, then generates **2025 forecasts** for :
 - **Total Revenue** (`total_revenue`)
 - **Total Boxes Shipped** (`total_boxes`)
 
@@ -77,8 +77,6 @@ Final selected model: **HistGradientBoostingRegressor**
 - **Revenue forecast MAPE:** ~14.38%
 - **Boxes forecast MAPE:** ~14.89%
 
-(Compared to the naive lag-1 baseline which performs significantly worse.)
-
 ---
 
 ## Repository Structure
@@ -117,7 +115,7 @@ Final selected model: **HistGradientBoostingRegressor**
 pip install -r requirements.txt
 ```
 
-### 2) Execute notebooks (in order)
+### 2) Execute notebooks in order
 
 1. `notebooks/01_eda.ipynb`  
    - **Outputs:** `data/processed_data.csv`
