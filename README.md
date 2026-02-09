@@ -77,6 +77,12 @@ Final selected model: **HistGradientBoostingRegressor**
 - **Revenue forecast MAPE:** ~14.38%
 - **Boxes forecast MAPE:** ~14.89%
 
+### 2025 Revenue Forecast
+![2025 Revenue Forecast](img/total_revenue_2025.png)
+
+### 2025 Boxes Forecast
+![2025 Boxes Forecast](img/total_boxes_2025.png)
+
 ---
 
 ## Repository Structure
