@@ -9,6 +9,26 @@ The final models are trained on **2022–2023** data and tested on **2024**. Aft
 
 ---
 
+## Table of Contents
+
+- [Project Goal](#project-goal)
+- [Dataset](#dataset)
+- [Methodology](#methodology)
+  - [EDA & Cleaning](#1-eda--cleaning)
+  - [Feature Engineering for Forecasting](#2-feature-engineering-for-forecasting)
+  - [Modeling & Evaluation](#3-modeling--evaluation)
+  - [2025 Forecast Generation](#4-2025-forecast-generation)
+- [Metrics](#metrics)
+- [Results (2024 Test Set)](#results-2024-test-set)
+  - [2025 Revenue Forecast](#2025-revenue-forecast)
+  - [2025 Boxes Forecast](#2025-boxes-forecast)
+- [Repository Structure](#repository-structure)
+- [How to Run](#how-to-run)
+  - [Install dependencies](#1-install-dependencies)
+  - [Execute notebooks in order](#2-execute-notebooks-in-order)
+
+---
+
 ## Project Goal
 
 **Problem statement :**  
@@ -61,6 +81,12 @@ To use scikit-learn for forecasting, time series data is transformed into a supe
 - Ridge regression (with seasonality)
 - HistGradientBoostingRegressor (final choice)
 
+### 4) 2025 Forecast Generation
+Forecasts are generated **recursively month-by-month** for 2025:
+- Each month prediction becomes part of the history to compute next month lags.
+
+---
+
 ## Metrics
 
 - **RMSE** (Root Mean Squared Error)
@@ -77,11 +103,6 @@ $$
 
 Where:
 - $y_i$ is the true value, $\hat{y}_i$ is the predicted value, and $n$ is the number of observations.
-
-
-### 4) 2025 Forecast Generation
-Forecasts are generated **recursively month-by-month** for 2025:
-- Each month prediction becomes part of the history to compute next month lags.
 
 ---
 
@@ -152,3 +173,5 @@ pip install -r requirements.txt
 
 3. `notebooks/03_forecast_2025.ipynb`  
    - **Outputs:** `outputs/forecast_2025.csv`
+  
+[⬆️ Back to top](#table-of-contents)
