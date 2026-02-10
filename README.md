@@ -1,4 +1,8 @@
-# Chocolate Sales Forecasting (2022–2025)
+# Chocolate Sales Forecasting (2022–2025) 🍫📈
+
+<p align="center">
+  <img src="https://excellencechocolate.com/wp-content/uploads/2016/12/banner-dark-chocolate.jpg"/>
+</p>
 
 Forecast monthly chocolate sales using historical transactions.  
 This project builds and evaluates forecasting models using a time-aware workflow, then generates **2025 forecasts** for :
@@ -9,10 +13,10 @@ The final models are trained on **2022–2023** data and tested on **2024**. Aft
 
 ---
 
-## Table of Contents
+## 📑 Table of Contents
 
-- [Project Goal](#project-goal)
-- [Dataset](#dataset)
+- [🎯 Project Goal](#-project-goal)
+- [📊 Dataset](#-dataset)
 - [Methodology](#methodology)
   - [EDA & Cleaning](#1-eda--cleaning)
   - [Feature Engineering for Forecasting](#2-feature-engineering-for-forecasting)
@@ -20,16 +24,16 @@ The final models are trained on **2022–2023** data and tested on **2024**. Aft
   - [2025 Forecast Generation](#4-2025-forecast-generation)
 - [Metrics](#metrics)
 - [Results (2024 Test Set)](#results-2024-test-set)
-  - [2025 Revenue Forecast](#2025-revenue-forecast)
-  - [2025 Boxes Forecast](#2025-boxes-forecast)
-- [Repository Structure](#repository-structure)
+  - [2025 Revenue Forecast](#-2025-revenue-forecast)
+  - [2025 Boxes Forecast](#-2025-boxes-forecast)
+- [Repository Structure](#-repository-structure)
 - [How to Run](#how-to-run)
-  - [Install dependencies](#1-install-dependencies)
-  - [Execute notebooks in order](#2-execute-notebooks-in-order)
+  - [Install dependencies](#1--install-dependencies)
+  - [Execute notebooks in order](#2--execute-notebooks-in-order)
 
 ---
 
-## Project Goal
+## 🎯 Project Goal
 
 **Problem statement :**  
 How can we use historical chocolate sales data to predict future demand (revenue and volume) to support better planning and reduce stockouts/overstock?
@@ -43,7 +47,7 @@ How can we use historical chocolate sales data to predict future demand (revenue
 
 ---
 
-## Dataset
+## 📊 Dataset
 
 - Source : [Kaggle Chocolate Sales dataset](https://www.kaggle.com/datasets/saidaminsaidaxmadov/chocolate-sales).  
 
@@ -113,17 +117,17 @@ Final selected model: **HistGradientBoostingRegressor**
 - **Revenue forecast MAPE:** ~14.38%
 - **Boxes forecast MAPE:** ~14.89%
 
-### 2025 Revenue Forecast
+### 💰 2025 Revenue Forecast
 ![2025 Revenue Forecast](assets/total_revenue_2025.png)
 
-### 2025 Boxes Forecast
+### 📦 2025 Boxes Forecast
 ![2025 Boxes Forecast](assets/total_boxes_2025.png)
 
 - The final HistGradientBoosting models achieved **~14% MAPE on 2024 data** and were used to generate 2025 forecasts.
 
 ---
 
-## Repository Structure
+## 🗂️ Repository Structure
 
 ```text
 .
@@ -153,13 +157,13 @@ Final selected model: **HistGradientBoostingRegressor**
 
 ### How to Run
 
-### 1) Install dependencies
+### 1) 📥 Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2) Execute notebooks in order
+### 2) ▶️ Execute notebooks in order
 
 1. `notebooks/01_eda.ipynb`  
    - **Outputs:** `data/processed_data.csv`
@@ -174,4 +178,4 @@ pip install -r requirements.txt
 3. `notebooks/03_forecast_2025.ipynb`  
    - **Outputs:** `outputs/forecast_2025.csv`
   
-[⬆️ Back to top](#table-of-contents)
+[⬆️ Back to top](#-table-of-contents)
