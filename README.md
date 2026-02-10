@@ -127,7 +127,7 @@ Final selected model: **HistGradientBoostingRegressor**
 
 ---
 
-## 🗂️ Repository Structure
+## 📂 Repository Structure
 
 ```text
 .
@@ -163,7 +163,7 @@ Final selected model: **HistGradientBoostingRegressor**
 pip install -r requirements.txt
 ```
 
-### 2) ▶️ Execute notebooks in order
+### 2) ⏬ Execute notebooks in order
 
 1. `notebooks/01_eda.ipynb`  
    - **Outputs:** `data/processed_data.csv`
