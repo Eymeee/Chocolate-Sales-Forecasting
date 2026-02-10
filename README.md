@@ -15,8 +15,8 @@ The final models are trained on **2022–2023** data and tested on **2024**. Aft
 
 ## 📑 Table of Contents
 
-- [🎯 Project Goal](#-project-goal)
-- [📊 Dataset](#-dataset)
+- [Project Goal](#-project-goal)
+- [Dataset](#-dataset)
 - [Methodology](#methodology)
   - [EDA & Cleaning](#1-eda--cleaning)
   - [Feature Engineering for Forecasting](#2-feature-engineering-for-forecasting)
